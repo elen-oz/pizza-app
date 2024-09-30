@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Nunito } from 'next/font/google';
+import type {Metadata} from "next";
+import {Nunito} from 'next/font/google';
 import "./globals.css";
 
 const nunito = Nunito({
@@ -9,22 +9,22 @@ const nunito = Nunito({
 })
 
 export const metadata: Metadata = {
-  title: "Pizza Caffe",
-      description: "Order your favorite pizza and get in one hour!",
+    title: "Pizza Delivery",
+    description: "Order your favorite pizza and get in one hour!",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
+export default function RootLayout({children}: Readonly<{
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={nunito.className}
-      >
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+        <body
+            className={nunito.className}
+        >
+        <main className='min-h-screen'>
+            {children}
+        </main>
+        </body>
+        </html>
+    );
 }
